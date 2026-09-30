@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Autheo Agent Environment — Give agents boundaries, not just tools.
+    </title>
+    <meta
+      name="description"
+      content="Explore a reference trust layer for AI agents: signed identities, scoped authority, simulated budgets, verifiable receipts and controlled environment handoffs. Built by SolutionsAsService."
+    />
+    <meta name="theme-color" content="#101b1b" />
+    <meta property="og:title" content="Autheo Agent Environment" />
+    <meta
+      property="og:description"
+      content="An inspectable path from human intent to bounded agent action."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="topbar wrap">
+      <a class="brand" href="#" aria-label="Autheo Agent Environment home"
+        ><img src="./favicon.svg" width="38" height="38" alt="" /><span
+          >AUTHEO <small>AGENT ENVIRONMENT</small></span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#architecture">Architecture</a
+        ><a href="#playground">Try the policy</a><a href="#roadmap">Roadmap</a
+        ><a
+          class="nav-source"
+          href="https://github.com/SolutionsAsService/autheo-agent-environment"
+          >Source ↗</a
+        >
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="dot"></span> TRUST LAYER / REFERENCE PROTOTYPE
+          </p>
+          <h1>
+            Give agents<br />boundaries.<br /><em>Then possibilities.</em>
+          </h1>
+          <p class="lede">
+            An agent needs more than tools. It needs an identity, a clear
+            mandate, a budget, and a record of what happened.
+          </p>
+          <div class="actions">
+            <a class="button" href="#playground"
+              >Explore the trust layer <span>↘</span></a
+            ><a
+              class="text-link"
+              href="https://github.com/SolutionsAsService/autheo-agent-environment#start-here"
+              >Run the local demo ↗</a
+            >
+          </div>
+          <p class="hero-note">
+            Built by SolutionsAsService · Local simulation · No live funds
+          </p>
+        </div>
+        <div class="passport-scene">
+          <div class="scene-label">
+            <span>01 / TRUST ENVELOPE</span><span>ED25519 SIGNED</span>
+          </div>
+          <div class="passport">
+            <div class="passport-top">
+              <span class="mini-mark">A / E</span
+              ><span class="pill">DEMO IDENTITY</span>
+            </div>
+            <div class="orbit" aria-hidden="true">
+              <div class="orbit-inner"><span>◎</span></div>
+            </div>
+            <p class="eyebrow">AGENT PASSPORT</p>
+            <h2>research-01</h2>
+            <dl>
+              <div>
+                <dt>Identity</dt>
+                <dd>Bound to agent key</dd>
+              </div>
+              <div>
+                <dt>Authority</dt>
+                <dd>Scoped & time-bound</dd>
+              </div>
+              <div>
+                <dt>Budget</dt>
+                <dd>60 / 100 DEMO</dd>
+              </div>
+            </dl>
+            <div class="passport-foot">
+              <span>env:research</span><span>→ env:review</span>
+            </div>
+          </div>
+          <p class="scene-caption">
+            Illustrative passport. Not a live credential.
+          </p>
+        </div>
+      </section>
+      <div class="principle-strip">
+        <div class="wrap">
+          <span>Identity before access</span><span>Scope before action</span
+          ><span>Evidence after decisions</span>
+        </div>
+      </div>
+      <section id="architecture" class="section wrap">
+        <div class="section-heading">
+          <p class="eyebrow">01 / THE FOUNDATION</p>
+          <h2>
+            Intelligence is the engine.<br />Trust is the operating model.
+          </h2>
+          <p>
+            Four connected primitives turn broad intent into inspectable,
+            bounded requests.
+          </p>
+        </div>
+        <div class="pillars">
+          <article>
+            <span class="index">01 / IDENTITY</span>
+            <div class="glyph" aria-hidden="true">◎</div>
+            <h3>Know the agent.</h3>
+            <p>
+              A signed passport binds an agent ID, an issuer-asserted owner, and
+              a public key. Requests prove possession of that key.
+            </p>
+            <span class="tag">Signed passports</span>
+          </article>
+          <article>
+            <span class="index">02 / AUTHORITY</span>
+            <div class="glyph" aria-hidden="true">⌘</div>
+            <h3>Define the limits.</h3>
+            <p>
+              Short-lived mandates specify permitted resources, operations, and
+              environments. A signature is not unlimited permission.
+            </p>
+            <span class="tag">Scoped mandates</span>
+          </article>
+          <article>
+            <span class="index">03 / BUDGET</span>
+            <div class="glyph" aria-hidden="true">◴</div>
+            <h3>Bound the spend.</h3>
+            <p>
+              Exact integer DEMO budgets model reservations and review
+              thresholds. Real wallets and payments are future adapters.
+            </p>
+            <span class="tag">Simulated accounting</span>
+          </article>
+          <article>
+            <span class="index">04 / ASSURANCE</span>
+            <div class="glyph" aria-hidden="true">≋</div>
+            <h3>Leave evidence.</h3>
+            <p>
+              Signed, hash-linked receipts make local records inspectable.
+              Independent trusted heads are needed to detect rollback.
+            </p>
+            <span class="tag">Tamper-evident receipts</span>
+          </article>
+        </div>
+      </section>
+      <section class="integration section" id="integration">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">02 / ONE SYSTEM, DISTINCT RESPONSIBILITIES</p>
+            <h2>From Dev Portal<br />to the platform layer.</h2>
+            <p>
+              The target architecture connects human intent to governed
+              execution. Dev Portal and Layer 0 adapters are planned—not
+              connected in this release.
+            </p>
+          </div>
+          <div class="flow" aria-label="Target architecture">
+            <article>
+              <span class="status planned">PLANNED</span>
+              <h3>Dev Portal</h3>
+              <p>Human intent<br />Agent registration<br />Mandate review</p>
+            </article>
+            <span class="arrow" aria-hidden="true">→</span>
+            <article class="flow-active">
+              <span class="status">LOCAL PROTOTYPE</span>
+              <h3>Agent Environment</h3>
+              <p>Identity & policy<br />DEMO budgets<br />Signed checkpoints</p>
+            </article>
+            <span class="arrow" aria-hidden="true">→</span>
+            <article>
+              <span class="status planned">PLANNED</span>
+              <h3>Layer 0 adapters</h3>
+              <p>
+                Platform operations<br />Isolated signing<br />Optional audit
+                anchoring
+              </p>
+            </article>
+          </div>
+          <div class="mcp-band">
+            <span class="mcp-icon" aria-hidden="true">↳</span>
+            <div>
+              <h3>Autheo MCP is the inspection bridge.</h3>
+              <p>
+                Five read-only trust tools expose signed summaries. MCP does not
+                issue authority, hold wallet keys, or authorize execution from a
+                snapshot.
+              </p>
+            </div>
+            <a href="https://github.com/ThothDivision/autheo-mcp"
+              >Explore MCP ↗</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section wrap playground" id="playground">
+        <div>
+          <p class="eyebrow">03 / TRY THE DECISION MODEL</p>
+          <h2>Not every request<br />should be a yes.</h2>
+          <p class="lede">
+            Explore how scope, remaining budget, and a review threshold shape
+            the outcome.
+          </p>
+          <div class="budget-detail">
+            <div><strong>60</strong><span>DEMO units remaining</span></div>
+            <div><strong>50</strong><span>Review threshold</span></div>
+          </div>
+          <p class="small">
+            Independent examples, not cumulative spending. This browser
+            illustration neither signs requests nor executes actions. The Python
+            environment is the reference implementation.
+          </p>
+        </div>
+        <div class="simulator">
+          <div class="simulator-heading">
+            <span>POLICY EXPLORER</span><span class="pill">ILLUSTRATIVE</span>
+          </div>
+          <label for="scope">Requested operation</label
+          ><select id="scope">
+            <option value="compute:read">compute:read · within scope</option>
+            <option value="wallet:transfer">
+              wallet:transfer · outside scope
+            </option>
+            <option value="deployment:create">
+              deployment:create · outside scope
+            </option></select
+          ><label for="amount">Requested budget · DEMO units</label
+          ><input
+            id="amount"
+            type="number"
+            min="0"
+            max="100"
+            step="1"
+            value="40"
+          />
+          <div class="presets" aria-label="Example requests">
+            <button type="button" data-amount="40">Try 40</button
+            ><button type="button" data-amount="51">Try 51</button
+            ><button type="button" data-amount="75">Try 75</button>
+          </div>
+          <div
+            id="decision"
+            role="status"
+            aria-live="polite"
+            data-outcome="allow"
+          >
+            <span id="outcome">ALLOW</span>
+            <p id="reason">
+              Within this illustrative scope and budget. No action is executed.
+            </p>
+          </div>
+          <noscript
+            ><p>
+              Enable JavaScript to use the interactive example. The reference
+              demo remains available in the source repository.
+            </p></noscript
+          >
+        </div>
+      </section>
+      <section class="handoff section wrap">
+        <div
+          class="handoff-diagram"
+          aria-label="Checkpoint moves from research to review"
+        >
+          <div class="environment-box">
+            <span>ENVIRONMENT A</span><strong>Research</strong
+            ><small>Scoped task context</small>
+          </div>
+          <div class="checkpoint">
+            <span>↓</span><strong>Signed checkpoint</strong
+            ><small>Allowlisted state + artifact digests</small><span>↓</span>
+          </div>
+          <div class="environment-box">
+            <span>ENVIRONMENT B</span><strong>Review</strong
+            ><small>Fresh, narrower authority required</small>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">04 / CONTROLLED TRANSITIONS</p>
+          <h2>Move context.<br /><em>Not unchecked power.</em></h2>
+          <p>
+            A task can cross environments without carrying its secrets or
+            expanding its permissions. Destination-bound checkpoints are signed,
+            replay-protected, and constrained.
+          </p>
+          <ul class="checklist">
+            <li>Transfer task references and artifact hashes.</li>
+            <li>Require fresh authority at the destination.</li>
+            <li>Leave private keys, funds, and credentials behind.</li>
+          </ul>
+          <p class="small">
+            This is a checkpoint handoff—not live process migration. No running
+            agent or execution authority is transferred.
+          </p>
+        </div>
+      </section>
+      <section class="section roadmap wrap" id="roadmap">
+        <div class="section-heading">
+          <p class="eyebrow">05 / WHAT EXISTS. WHAT COMES NEXT.</p>
+          <h2>A practical path to<br />trusted agent operations.</h2>
+        </div>
+        <div class="roadmap-grid">
+          <article>
+            <span class="status">AVAILABLE NOW</span>
+            <h3>Local reference layer</h3>
+            <p>
+              Signed identities and mandates, policy decisions, DEMO budgets,
+              receipts, checkpoint handoffs, and read-only MCP inspection.
+            </p>
+          </article>
+          <article>
+            <span class="status planned">NEXT / INTEGRATION</span>
+            <h3>Dev Portal control plane</h3>
+            <p>
+              Map authenticated users and tenants to governed issuers. Add
+              workload isolation, key custody, revocation distribution, and
+              reviewed execution adapters.
+            </p>
+          </article>
+          <article>
+            <span class="status planned">LATER / VERIFIED EXECUTION</span>
+            <h3>Platform & settlement</h3>
+            <p>
+              Validate actual Layer 0 APIs, reconcile real operation outcomes,
+              add policy-bound wallet adapters and independently anchored audit
+              evidence.
+            </p>
+          </article>
+        </div>
+        <p class="boundary">
+          A local allow decision is a simulated reservation—not a real
+          deployment, payment, or proof of execution. Production activation
+          requires integration testing and security review.
+        </p>
+      </section>
+      <section class="cta wrap">
+        <p class="eyebrow">BUILD THE TRUST LAYER</p>
+        <h2>Inspect it. Run it.<br />Help shape what comes next.</h2>
+        <div class="actions">
+          <a
+            class="button"
+            href="https://github.com/SolutionsAsService/autheo-agent-environment"
+            >Get the environment <span>↗</span></a
+          ><a
+            class="text-link"
+            href="https://github.com/SolutionsAsService/autheo-agent-environment/blob/main/docs/DEV-PORTAL-LAYER0.md"
+            >Read the integration plan ↗</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="wrap">
+      <div class="brand">
+        <img src="./favicon.svg" width="30" height="30" alt="" /><span
+          >AUTHEO <small>AGENT ENVIRONMENT</small></span
+        >
+      </div>
+      <p>
+        Built by
+        <a href="https://github.com/SolutionsAsService">SolutionsAsService</a>
+      </p>
+      <a
+        href="https://github.com/SolutionsAsService/autheo-agent-environment-site"
+        >Website source ↗</a
+      >
+    </footer>
+  </body>
+</html>
